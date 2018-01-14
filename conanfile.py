@@ -22,9 +22,9 @@ class RangeV3Vs2015Conan(ConanFile):
     source_subfolder = "source_subfolder"
     
     def source(self):
-        source_url = "https://github.com/Microsoft/Range-V3-VS2015/archive/"
+        source_url = "https://github.com/Microsoft/Range-V3-VS2015"
         tools.get("{0}/archive/{1}.tar.gz".format(source_url, self.vcpkg_version))
-        extracted_dir = self.name + "-" + self.vcpkg_version
+        extracted_dir = self.name + "-VS2015-" + self.vcpkg_version
 
         #Rename to "source_folder" is a convention to simplify later steps
         os.rename(extracted_dir, self.source_subfolder)
